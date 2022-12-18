@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		12A1993B294F2E1E00BF5817 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A1993A294F2E1E00BF5817 /* AppDelegate.swift */; };
 		12A1993D294F2E1E00BF5817 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A1993C294F2E1E00BF5817 /* SceneDelegate.swift */; };
-		12A1993F294F2E1E00BF5817 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A1993E294F2E1E00BF5817 /* ViewController.swift */; };
+		12A1993F294F2E1E00BF5817 /* CriptoInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A1993E294F2E1E00BF5817 /* CriptoInfoViewController.swift */; };
 		12A19942294F2E1E00BF5817 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12A19940294F2E1E00BF5817 /* Main.storyboard */; };
 		12A19944294F2E2100BF5817 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12A19943294F2E2100BF5817 /* Assets.xcassets */; };
 		12A19947294F2E2100BF5817 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12A19945294F2E2100BF5817 /* LaunchScreen.storyboard */; };
+		12A19953294F314C00BF5817 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A19952294F314C00BF5817 /* NetworkManager.swift */; };
+		12A19955294F36CE00BF5817 /* DataSorce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A19954294F36CE00BF5817 /* DataSorce.swift */; };
+		12A19958294F403600BF5817 /* Blockchain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A19957294F403600BF5817 /* Blockchain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		12A19937294F2E1E00BF5817 /* HW3.3_URLSession_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW3.3_URLSession_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12A1993A294F2E1E00BF5817 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12A1993C294F2E1E00BF5817 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		12A1993E294F2E1E00BF5817 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		12A1993E294F2E1E00BF5817 /* CriptoInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoInfoViewController.swift; sourceTree = "<group>"; };
 		12A19941294F2E1E00BF5817 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12A19943294F2E2100BF5817 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12A19946294F2E2100BF5817 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12A19948294F2E2100BF5817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12A19952294F314C00BF5817 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		12A19954294F36CE00BF5817 /* DataSorce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSorce.swift; sourceTree = "<group>"; };
+		12A19957294F403600BF5817 /* Blockchain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blockchain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		12A19939294F2E1E00BF5817 /* HW3.3_URLSession_2 */ = {
 			isa = PBXGroup;
 			children = (
-				12A1993A294F2E1E00BF5817 /* AppDelegate.swift */,
-				12A1993C294F2E1E00BF5817 /* SceneDelegate.swift */,
-				12A1993E294F2E1E00BF5817 /* ViewController.swift */,
-				12A19940294F2E1E00BF5817 /* Main.storyboard */,
+				12A19956294F401100BF5817 /* Models */,
+				12A19951294F2E8000BF5817 /* Services */,
+				12A1994E294F2E3600BF5817 /* Delegates */,
+				12A19950294F2E6B00BF5817 /* ViewControllers */,
+				12A1994F294F2E5900BF5817 /* Storyboards */,
 				12A19943294F2E2100BF5817 /* Assets.xcassets */,
-				12A19945294F2E2100BF5817 /* LaunchScreen.storyboard */,
 				12A19948294F2E2100BF5817 /* Info.plist */,
 			);
 			path = HW3.3_URLSession_2;
+			sourceTree = "<group>";
+		};
+		12A1994E294F2E3600BF5817 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				12A1993A294F2E1E00BF5817 /* AppDelegate.swift */,
+				12A1993C294F2E1E00BF5817 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		12A1994F294F2E5900BF5817 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				12A19940294F2E1E00BF5817 /* Main.storyboard */,
+				12A19945294F2E2100BF5817 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		12A19950294F2E6B00BF5817 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				12A1993E294F2E1E00BF5817 /* CriptoInfoViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		12A19951294F2E8000BF5817 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				12A19952294F314C00BF5817 /* NetworkManager.swift */,
+				12A19954294F36CE00BF5817 /* DataSorce.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		12A19956294F401100BF5817 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12A19957294F403600BF5817 /* Blockchain.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +187,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12A1993F294F2E1E00BF5817 /* ViewController.swift in Sources */,
+				12A19953294F314C00BF5817 /* NetworkManager.swift in Sources */,
+				12A19955294F36CE00BF5817 /* DataSorce.swift in Sources */,
+				12A1993F294F2E1E00BF5817 /* CriptoInfoViewController.swift in Sources */,
 				12A1993B294F2E1E00BF5817 /* AppDelegate.swift in Sources */,
 				12A1993D294F2E1E00BF5817 /* SceneDelegate.swift in Sources */,
+				12A19958294F403600BF5817 /* Blockchain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
