@@ -16,6 +16,7 @@
 		12A19953294F314C00BF5817 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A19952294F314C00BF5817 /* NetworkManager.swift */; };
 		12A19955294F36CE00BF5817 /* DataSorce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A19954294F36CE00BF5817 /* DataSorce.swift */; };
 		12A19958294F403600BF5817 /* Blockchain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A19957294F403600BF5817 /* Blockchain.swift */; };
+		12A1995A294F498200BF5817 /* CriptoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A19959294F498200BF5817 /* CriptoCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		12A19952294F314C00BF5817 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		12A19954294F36CE00BF5817 /* DataSorce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSorce.swift; sourceTree = "<group>"; };
 		12A19957294F403600BF5817 /* Blockchain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blockchain.swift; sourceTree = "<group>"; };
+		12A19959294F498200BF5817 /* CriptoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				12A1993E294F2E1E00BF5817 /* CriptoInfoViewController.swift */,
+				12A19959294F498200BF5817 /* CriptoCollectionViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				12A19955294F36CE00BF5817 /* DataSorce.swift in Sources */,
 				12A1993F294F2E1E00BF5817 /* CriptoInfoViewController.swift in Sources */,
 				12A1993B294F2E1E00BF5817 /* AppDelegate.swift in Sources */,
+				12A1995A294F498200BF5817 /* CriptoCollectionViewCell.swift in Sources */,
 				12A1993D294F2E1E00BF5817 /* SceneDelegate.swift in Sources */,
 				12A19958294F403600BF5817 /* Blockchain.swift in Sources */,
 			);
