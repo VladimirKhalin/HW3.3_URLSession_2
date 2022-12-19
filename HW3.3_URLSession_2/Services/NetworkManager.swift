@@ -10,7 +10,7 @@ class NetworkManager {
     static let shared = NetworkManager()
     private init() {}
     
-    func fetchCriptoRate(from url: String?, completiion: @escaping(Result<CurrencyAbb, NetworkError>) -> Void) {
+    func fetchCriptoRate(from url: String?, completiion: @escaping(Result<[Blockchain], NetworkError>) -> Void) {
         guard let url = URL(string: url ?? "") else { return }
         
         DispatchQueue.global().async {
@@ -19,9 +19,13 @@ class NetworkManager {
                 return
             }
             do {
-                let exchangeRate = try JSONDecoder().decode(CurrencyAbb.self, from: criptoData)
+                //let exchangeRate = try JSONDecoder().decode(CurrencyAbb.self, from: criptoData)
+                let exchangeRate = try JSONDecoder().decode([String : Blockchain].self, from: criptoData)
+                let values = exchangeRate.map {$0.value}
+                //print(values.count)
+                
                 DispatchQueue.main.async {
-                    completiion(.success(exchangeRate))
+                    completiion(.success(values))
                 }
             } catch {
                 completiion(.failure(.decodingError))
