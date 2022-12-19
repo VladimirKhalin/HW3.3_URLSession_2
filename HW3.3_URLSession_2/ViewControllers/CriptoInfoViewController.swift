@@ -7,13 +7,13 @@
 
 import UIKit
 
-class CriptoInfoViewController: UIViewController {
+final class CriptoInfoViewController: UIViewController {
 
     @IBOutlet var criptoCollectionView: UICollectionView!
     @IBOutlet var date: UILabel!
     
     private let currency = ["USD", "EUR", "RUB", "PLN", "GBP"]
-    var values: [Blockchain] = []
+    private var values: [Blockchain] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
