@@ -36,6 +36,7 @@ final class CriptoInfoViewController: UIViewController {
                 self?.sortCurrencyValues()
                 self?.dateToString(of: Date())
                 self?.criptoCollectionView.reloadData()
+                
             case .failure(let error):
                 print(error)
             }
@@ -71,13 +72,13 @@ extension CriptoInfoViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-      let Cell = collectionView.dequeueReusableCell(withReuseIdentifier: "criptoCell", for: indexPath) as! CriptoCollectionViewCell
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "criptoCell", for: indexPath) as! CriptoCollectionViewCell
                
-        Cell.currencyLogo.text = "\(values[indexPath.item].symbol)/BTC"
-        Cell.currencyRate.text = String(values[indexPath.item].last)
-        Cell.flagLogo.image = UIImage(named: values[indexPath.item].symbol) ?? UIImage(named: "NOFLAG")
+        cell.currencyLogo.text = "\(values[indexPath.item].symbol)/BTC"
+        cell.currencyRate.text = String(values[indexPath.item].last)
+        cell.flagLogo.image = UIImage(named: values[indexPath.item].symbol) ?? UIImage(named: "NOFLAG")
         
-        return Cell
+        return cell
     }
 }
 

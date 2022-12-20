@@ -5,11 +5,29 @@
 //  Created by Vladimir Khalin on 18.12.2022.
 //
 import Foundation
+import Alamofire
 
 class NetworkManager {
     static let shared = NetworkManager()
     private init() {}
     
+    var criptos: [Blockchain] = []
+    
+    func fetchCriptoRate(from url: String, completion: @escaping(Result<[Blockchain], AFError>) -> Void) {
+        AF.request(url)
+            .validate()
+            .responseJSON { dataResponse in
+                switch dataResponse.result {
+                case .success(let value):
+                    self.criptos = Blockchain.getCriptos(from: value)
+                    completion(.success(self.criptos))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+    }
+}
+    /*
     func fetchCriptoRate(from url: String?, completiion: @escaping(Result<[Blockchain], NetworkError>) -> Void) {
         guard let url = URL(string: url ?? "") else { return }
         
@@ -19,10 +37,9 @@ class NetworkManager {
                 return
             }
             do {
-                //let exchangeRate = try JSONDecoder().decode(CurrencyAbb.self, from: criptoData)
+
                 let exchangeRate = try JSONDecoder().decode([String : Blockchain].self, from: criptoData)
                 let values = exchangeRate.map {$0.value}
-                //print(values.count)
                 
                 DispatchQueue.main.async {
                     completiion(.success(values))
@@ -32,4 +49,6 @@ class NetworkManager {
             }
         }
     }
-}
+    */
+    
+
